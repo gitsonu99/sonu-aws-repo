@@ -43,4 +43,10 @@ public String getMessage() {
 	return "Welcome to amazon web service!";
 }
 
+@RequestMapping("/test")
+public String testMessage() {
+	return "Code has been modified!";
+}
+
+
 }
