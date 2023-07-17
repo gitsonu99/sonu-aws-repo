@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.digivive.api.entity.Person;
+import com.digivive.api.service.AwsBucketService;
 import com.digivive.api.service.DynamoDbService;
 
 @RestController
@@ -18,6 +19,7 @@ import com.digivive.api.service.DynamoDbService;
 public class DyamoDbController {
 	@Autowired 
 	private DynamoDbService service;
+	
 
 @PostMapping("/save")
 public Person savePerson(@RequestBody Person person) {
@@ -47,6 +49,8 @@ public String getMessage() {
 public String testMessage() {
 	return "Code has been modified!";
 }
+
+
 
 
 }
